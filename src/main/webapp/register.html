@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Registration Form</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: linear-gradient(
+                    135deg,
+                    #667eea,
+                    #764ba2
+            );
+        }
+
+        .card{
+            width: 400px;
+
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 16px;
+
+            box-shadow:
+                    0 10px 25px rgba(0,0,0,0.15);
+
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn{
+            from{
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2{
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+            font-size: 28px;
+        }
+
+        .input-group{
+            margin-bottom: 18px;
+        }
+
+        label{
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #444;
+            font-size: 14px;
+        }
+
+        input,
+        select{
+            width: 100%;
+            padding: 12px;
+
+            border: 1px solid #ccc;
+            border-radius: 8px;
+
+            font-size: 14px;
+
+            transition: 0.3s;
+        }
+
+        input:focus,
+        select:focus{
+            border-color: #667eea;
+            outline: none;
+
+            box-shadow:
+                    0 0 8px rgba(102,126,234,0.4);
+        }
+
+        .hobbies{
+            margin-top: 8px;
+        }
+
+        .hobby-item{
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .hobby-item input{
+            width: auto;
+            margin-right: 10px;
+        }
+
+        button{
+            width: 100%;
+
+            padding: 13px;
+
+            border: none;
+            border-radius: 8px;
+
+            background: linear-gradient(
+                    135deg,
+                    #667eea,
+                    #764ba2
+            );
+
+            color: white;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        button:hover{
+            transform: translateY(-2px);
+
+            box-shadow:
+                    0 6px 15px rgba(0,0,0,0.2);
+        }
+
+        .footer{
+            text-align: center;
+            margin-top: 18px;
+            font-size: 14px;
+            color: #666;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <h2>Create Account</h2>
+
+    <form action="register" method="post">
+
+        <div class="input-group">
+            <label>Full Name</label>
+
+            <input type="text"
+                   name="name"
+                   placeholder="Enter your full name"
+                   required>
+        </div>
+
+        <div class="input-group">
+            <label>Email Address</label>
+
+            <input type="email"
+                   name="email"
+                   placeholder="abc@gmail.com"
+                   required>
+        </div>
+
+        <div class="input-group">
+            <label>Age</label>
+
+            <input type="number"
+                   name="age"
+                   min="1"
+                   max="100"
+                   placeholder="Enter age"
+                   required>
+        </div>
+
+        <div class="input-group">
+            <label>Gender</label>
+
+            <select name="gender">
+
+                <option value="Male">
+                    Male
+                </option>
+
+                <option value="Female">
+                    Female
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+        </div>
+
+        <div class="input-group">
+
+            <label>Hobbies</label>
+
+            <div class="hobbies">
+
+                <div class="hobby-item">
+                    <input type="checkbox"
+                           name="hobbies"
+                           value="Cricket">
+
+                    <span>Cricket</span>
+                </div>
+
+                <div class="hobby-item">
+                    <input type="checkbox"
+                           name="hobbies"
+                           value="Reading">
+
+                    <span>Reading</span>
+                </div>
+
+                <div class="hobby-item">
+                    <input type="checkbox"
+                           name="hobbies"
+                           value="Coding">
+
+                    <span>Coding</span>
+                </div>
+
+            </div>
+        </div>
+
+        <button type="submit">
+            Register
+        </button>
+
+    </form>
+
+    <div class="footer">
+        Java Servlet Registration Form
+    </div>
+
+</div>
+
+</body>
+</html>
